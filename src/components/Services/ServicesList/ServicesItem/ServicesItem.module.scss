@@ -1,0 +1,94 @@
+.servicesItem {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  padding: 24px 32px;
+
+  background: #ffffff;
+  border: 1px solid #e2e5ec;
+  border-radius: 6px;
+}
+
+.info {
+  margin-right: auto;
+}
+
+.title {
+  margin-bottom: 17px;
+
+  font-weight: 300;
+  font-size: 29px;
+  color: #000000;
+}
+
+.description {
+  font-size: 15px;
+  color: #7d7d7d;
+}
+
+.promoCode {
+  position: relative;
+
+  margin-right: 24px;
+}
+
+.promoCodeTitle {
+  position: absolute;
+  left: 0;
+  top: -21px;
+
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: #7D7D7D;
+}
+
+.promoCodeField {
+  position: relative;
+
+
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 48px;
+  padding: 0 17px;
+
+  font-size: 15px;
+  color: #262626;
+
+  background: #FFFFFF;
+  border: 1px solid #E2E5EC;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 17px;
+    z-index: 1;
+
+    width: 14px;
+    height: 16px;
+
+    background: url('./copyIcon.svg') no-repeat center /contain;
+
+    content: '';
+  }
+}
+
+.btn {
+  width: 300px;
+  height: 48px;
+
+  font-family: inherit;
+  font-size: 19px;
+  color: #fff;
+
+  background: #0085ff;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
