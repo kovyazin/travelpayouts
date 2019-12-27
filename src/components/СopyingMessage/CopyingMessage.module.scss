@@ -1,0 +1,19 @@
+.copyingMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+
+  color: #fff;
+  font-size: 19px;
+  font-weight: 300;
+
+  background: rgba(#1b1d29, .8);
+  border-radius: 4px;
+}

@@ -51,6 +51,18 @@
   background: #F5F7FA;
   border: 1px solid #CFD2D9;
   border-radius: 4px;
+  outline: none;
 
+  transition: .3s linear;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: #2F80ED;
+  }
+
+  &:active {
+    border-color: #2F80ED;
+    box-shadow: 0 0 0 2px #CCE7FF;
+  }
 }

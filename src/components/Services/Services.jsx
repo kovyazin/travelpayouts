@@ -1,23 +1,43 @@
 /* Import libraries */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 /* Import components */
-import ServicesList from './ServicesList/ServicesList'
+import BonusesList from './BonusesList/BonusesList'
 import Filter from '../Filter/Filter'
 
 /* Import styles */
 import styles from './Services.module.scss'
 
-const Services = () => {
+const Services = ({ bonuses }) => {
+  const [filterValue, setFilterValue] = useState('')
+  const [filteredBonuses, setFilteredBonuses] = useState(bonuses)
+
+  useEffect(() => setFilteredBonuses(bonuses), [bonuses])
+
   return (
     <div className={styles.services}>
       <div className={styles.title}>Сервисы</div>
       <div className={styles.filter}>
-        <Filter />
+        <Filter
+          filterValue={filterValue}
+          setFilterValue={setFilterValue}
+          setFilteredBonuses={setFilteredBonuses}
+          bonuses={bonuses}
+        />
       </div>
-      <ServicesList />
+      <BonusesList filteredBonuses={filteredBonuses} />
     </div>
   )
 }
 
-export default Services
+Services.propTypes = {
+  bonuses: PropTypes.arrayOf(PropTypes.object).isRequired
+}
+
+const mapStateToProps = ({ services: { bonuses } }) => ({
+  bonuses
+})
+
+export default connect(mapStateToProps)(Services)

@@ -14,6 +14,13 @@
     "semi": 0,
     "quotes": ["error", "single"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-shadow": "off",
+    "import/prefer-default-export": 0,
+    "no-unused-expressions": [
+      "error", {
+        "allowTernary": true
+      }
+    ],
     "prettier/prettier": [
       "error", {
         "semi": false,
