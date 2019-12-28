@@ -7,10 +7,32 @@
   background: #ffffff;
   border: 1px solid #e2e5ec;
   border-radius: 6px;
+
+  @media screen and (max-width: 992px) {
+    padding: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    max-width: 360px;
+    margin: 0 auto;
+  }
 }
 
 .info {
-  margin-right: auto;
+  margin-right: 24px;
+
+  @media screen and (max-width: 992px) {
+    margin-right: 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 36px;
+
+    text-align: center;
+  }
 }
 
 .title {
@@ -19,6 +41,16 @@
   font-weight: 300;
   font-size: 29px;
   color: #000000;
+
+  @media screen and (max-width: 992px) {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 6px;
+
+    font-size: 29px;
+  }
 }
 
 .description {
@@ -27,9 +59,20 @@
 }
 
 .promoCode {
+  width: 300px;
   position: relative;
 
+  margin-left: auto;
   margin-right: 24px;
+
+  @media screen and (max-width: 1170px) {
+    width: 200px;
+    margin-right: 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 0 16px;
+  }
 }
 
 .promoCodeTitle {
@@ -41,27 +84,28 @@
   line-height: 16px;
   letter-spacing: 0.015em;
   text-transform: uppercase;
-  color: #7D7D7D;
+  color: #7d7d7d;
 }
 
 .promoCodeField {
   position: relative;
 
-
-  display: flex;
-  align-items: center;
-  width: 300px;
+  width: 100%;
   height: 48px;
-  padding: 0 17px;
+  padding: 0 36px 0 17px;
 
   font-size: 15px;
   color: #262626;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 48px;
 
-  background: #FFFFFF;
-  border: 1px solid #E2E5EC;
+  background: #ffffff;
+  border: 1px solid #e2e5ec;
   border-radius: 6px;
 
   cursor: pointer;
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -72,9 +116,9 @@
     width: 14px;
     height: 16px;
 
-    background: url('./copyIcon.svg') no-repeat center /contain;
+    background: url("./copyIcon.svg") no-repeat center / contain;
 
-    content: '';
+    content: "";
   }
 }
 
@@ -95,4 +139,10 @@
   border-radius: 4px;
 
   cursor: pointer;
+
+  @media screen and (max-width: 1170px) {
+    width: 200px;
+
+    font-size: 16px;
+  }
 }

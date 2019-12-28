@@ -12,6 +12,7 @@
 
 body {
   margin: 0;
+  //min-width: 320px;
 
   font-family: 'Roboto', Arial, Tahoma, sans-serif;
 }
@@ -28,5 +29,4 @@ body {
 }
 .fade-exit-active {
   opacity: 0;
-  transition: opacity 500ms ease-out;
 }

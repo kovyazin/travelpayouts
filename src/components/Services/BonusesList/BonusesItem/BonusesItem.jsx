@@ -51,7 +51,7 @@ BonusesItem.defaultProps = {
   title: null,
   description: null,
   link: null,
-  promocode: null
+  promocode: 'Промокод отсутствует'
 }
 
 BonusesItem.propTypes = {
