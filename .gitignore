@@ -7,6 +7,7 @@
 .huskyrc.json
 .lintstagedrc.json
 .eslintrc
+.idea
 
 # testing
 /coverage
