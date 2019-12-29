@@ -18,9 +18,8 @@ const BonusesItem = ({
   showCopyMessage
 }) => {
   const onCopyPromocode = (text, result) => {
-    result
-      ? showCopyMessage('Промокод скопирован!')
-      : showCopyMessage('Не удалось скопировать промокод!')
+    if (result && text) showCopyMessage('Промокод скопирован!')
+    if (!result && text) showCopyMessage('Не удалось скопировать промокод!')
   }
 
   return (
@@ -32,7 +31,9 @@ const BonusesItem = ({
       <div className={styles.promoCode}>
         <div className={styles.promoCodeTitle}>промокод</div>
         <CopyToClipboard text={promocode} onCopy={onCopyPromocode}>
-          <div className={styles.promoCodeField}>{promocode}</div>
+          <div className={styles.promoCodeField}>
+            {promocode || 'Промокод отсутствует'}
+          </div>
         </CopyToClipboard>
       </div>
       <a
@@ -48,10 +49,10 @@ const BonusesItem = ({
 }
 
 BonusesItem.defaultProps = {
-  title: null,
-  description: null,
+  title: 'Название отсутствует',
+  description: 'Описание отсутствует',
   link: null,
-  promocode: 'Промокод отсутствует'
+  promocode: null
 }
 
 BonusesItem.propTypes = {
